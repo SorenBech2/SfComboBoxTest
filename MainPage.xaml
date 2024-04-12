@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfinputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             x:Class="SfComboBoxTest.MainPage">
+
+    <Grid ColumnSpacing="5" RowDefinitions="50, 60" ColumnDefinitions="15, 160, 180" >
+        <Button Grid.Row="0" Grid.Column="1" 
+                Text="Rest Combo box index" Pressed="Button_Pressed"/>
+
+        <Label Grid.Row="1" Grid.Column="1"
+                Text="Select Nights To Stay" FontSize="Body" FontAttributes="Bold" LineBreakMode="WordWrap" HorizontalTextAlignment="End" VerticalOptions="Center" />
+
+        <sfinputs:SfComboBox Grid.Row="1" Grid.Column="2"
+                Placeholder="# Nights" HorizontalTextAlignment="Center" PlaceholderColor="Gray"
+                FontSize="Medium" MaxDropDownHeight="190" DropDownItemHeight="35" ItemsSource="{Binding BookingAlternativeList}"  
+                SelectedIndex="{Binding BookingListIndex}" MaximumWidthRequest="140" HorizontalOptions="Center" Background="Transparent" 
+                Stroke="Transparent" IsClearButtonVisible="False" SelectionChanged="BookingList_SelectedIndexChanged" />
+
+    </Grid>
+</ContentPage>
